@@ -25,13 +25,13 @@ Comandos:
 
 - Versão 1.0:
 
-/muac - Conferir limite de animais na região.
+    /muac - Conferir limite de animais na região.
 
 Permissões:
 
 - Versão 1.0:
 
-muac.muac
+    muac.muac
 
 # English
 
