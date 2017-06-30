@@ -27,7 +27,7 @@ Comandos:
 
     /muac - Conferir limite de animais na região.
 
-#Permissões#
+*Permissões*
 
 Versão 1.0:
 
@@ -51,14 +51,12 @@ Resources:
 -    Control of the use of eggs.
 -    Configurable mob limit message reached.
 
-Commands:
+*Commands:
 
-- Version 1.0:
-
+Version 1.0:
 /muac - Conferir limite de animais na região.
 
-Permissions:
+*Permissions*
 
-- Version 1.0:
-
+Version 1.0:
 muac.muac
