@@ -27,9 +27,9 @@ Comandos:
 
     /muac - Conferir limite de animais na região.
 
-Permissões:
+#Permissões#
 
-- Versão 1.0:
+Versão 1.0:
 
     muac.muac
 
