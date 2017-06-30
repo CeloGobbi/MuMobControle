@@ -51,12 +51,14 @@ Resources:
 -    Control of the use of eggs.
 -    Configurable mob limit message reached.
 
-*Commands:
+*Commands*:
 
 Version 1.0:
-/muac - Conferir limite de animais na região.
+
+    /muac - Check limit of animals in the region.
 
 *Permissions*
 
 Version 1.0:
-muac.muac
+
+    muac.muac
