@@ -1,0 +1,91 @@
+#Tradução: Mushu949 
+#
+#limite-de-animais:
+#
+#Portugues BR
+#Se o valor 0 o mob será impedido de nascer! 
+#Se um animal/monstro não estiver na lista (limite-de-animais), o seu limite de reprodução/invocação não vai ser controlado!
+#Para que o plugin passe à controlar um animal da lista basta remover o # - EX: de (#- RABBIT=25) para (- RABBIT=25)
+#
+#English
+#If the value 0 the mob will be prevented from being born!
+#If an animal / monster is not on the list (limite-de-animais), your playback / invocation limit will not be controlled!
+#In order for the plugin to control an animal from the list, simply remove the # - EX: in (#- RABBIT=25) to (- RABBIT=25)
+
+limite-de-animais:
+#- ELDER_GUARDIAN=25
+#- WITHER_SKELETON=25
+#- STRAY=25
+#- HUSK=25
+#- ZOMBIE_VILLAGER=25
+#- SKELETON_HORSE=25
+#- ZOMBIE_HORSE=25
+#- DONKEY=25
+#- MULE=25
+#- EVOKER=25
+#- VEX=25
+#- VINDICATOR=25
+#- ILLUSIONER=25
+#- CREEPER=25
+#- SKELETON=25
+#- SPIDER=25
+#- GIANT=25
+#- ZOMBIE=25
+#- SLIME=25
+#- GHAST=25
+#- PIG_ZOMBIE=25
+#- ENDERMAN=25
+#- CAVE_SPIDER=25
+#- SILVERFISH=25
+#- BLAZE=25
+#- MAGMA_CUBE=25
+#- ENDER_DRAGON=25
+#- WITHER=25
+#- BAT=25
+#- WITCH=25
+#- ENDERMITE=25
+#- GUARDIAN=25
+#- SHULKER=25
+#- PIG=25
+#- SHEEP=25
+#- COW=25
+#- CHICKEN=25
+#- SQUID=25
+#- WOLF=25
+#- MUSHROOM_COW=25
+#- SNOWMAN=25
+#- OCELOT=25
+#- IRON_GOLEM=25
+#- HORSE=25
+#- RABBIT=25
+#- POLAR_BEAR=25
+#- LLAMA=25
+#- PARROT=25
+#- VILLAGER=25
+
+#Portugues BR
+#Mensagem que aparecera quando o jogador atingir o numero máximo de animais na região delimitada na opção "limite-de-animais".
+#
+#English
+#Message that will appear when the player reaches the maximum number of animals in the region delimited in the option "limite-de-animais".
+#
+#Padrão/defount
+#falha-na-reproducao: §6[§f§lMuAC§6] Sua criação já atingiu numero maximo de mobs!
+
+falha-na-reproducao: §6[§f§lMuAC§6] Sua criação já atingiu numero maximo de mobs!
+
+#Portugues BR
+#Nesta opção você pode escolher o limite de blocos que um player devera se distanciar para iniciar uma nova criação de animais.
+#Cada especie com seu limite!
+#area-total: 16, 16, 256
+#Os números 16 representam respectivamente o X e o Z enquanto os 256 representa o Y
+#area-total: X=16, Z=16, Y=256
+#
+#English
+#In this option you can choose the limit of blocks that a player must distance to start a new breeding of animals.
+#Each species with its limit!
+#area-total: 16, 16, 256
+#The numbers 16 represent respectively the X and the Z while the 256 represents the Y
+#area-total: X=16, Z=16, Y=256
+
+area-total: 288, 288, 256
