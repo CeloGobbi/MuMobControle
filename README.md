@@ -1,8 +1,8 @@
 # MuAnimalControle
 Pagina do Spigot:
-https://www.spigotmc.org/resources/muanimalcontrole.35513/
+*https://www.spigotmc.org/resources/muanimalcontrole.35513/
 
-Português:
+# Português:
 
 Olá pessoas do Spigot!
 
@@ -23,18 +23,14 @@ Recursos:
 
 Comandos:
 
--  /muac - Conferir limite de animais na região.
+- Versão 1.0:
+/muac - Conferir limite de animais na região.
 
 Permissões:
 
 - muac.muac
 
-Downloads:
-
-[Download plugin MuAnimalControle - V1.0](https://www.spigotmc.org/resources/muanimalcontrole.35513/download?version=139221)
-[Download Source code MuAnimalControle - V1.0](https://github.com/Mushu949/MuAnimalControle/files/1116029/MuAnimalControle-V1.0.zip)
-
-English
+# English
 
 Hello people of Spigot!
 
@@ -54,14 +50,10 @@ Resources:
 
 Commands:
 
--    /muac - Conferir limite de animais na região.
+- Version 1.0:
+/muac - Conferir limite de animais na região.
 
 Permissions:
 
-- muac.muac
-
-Downloads:
-
-[Download plugin MuAnimalControle - V1.0](https://www.spigotmc.org/resources/muanimalcontrole.35513/download?version=139221)
-[Download Source code MuAnimalControle - V1.0](https://github.com/Mushu949/MuAnimalControle/files/1116029/MuAnimalControle-V1.0.zip)
-
+- Version 1.0:
+muac.muac
