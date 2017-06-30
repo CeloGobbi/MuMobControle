@@ -1,6 +1,6 @@
 # MuAnimalControle
 Pagina do Spigot:
-*https://www.spigotmc.org/resources/muanimalcontrole.35513/
+*https://www.spigotmc.org/resources/muanimalcontrole.35513/*
 
 # Português:
 
@@ -24,11 +24,14 @@ Recursos:
 Comandos:
 
 - Versão 1.0:
+
 /muac - Conferir limite de animais na região.
 
 Permissões:
 
-- muac.muac
+- Versão 1.0:
+
+muac.muac
 
 # English
 
@@ -51,9 +54,11 @@ Resources:
 Commands:
 
 - Version 1.0:
+
 /muac - Conferir limite de animais na região.
 
 Permissions:
 
 - Version 1.0:
+
 muac.muac
