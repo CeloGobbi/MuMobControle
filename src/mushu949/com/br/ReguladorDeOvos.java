@@ -17,7 +17,7 @@ private HashMap<EntityType, Integer> animalLimits;
 private String breedingFailedMsg;
 private String[] area;
 
-public ReguladorDeOvos(Main instance, HashMap<EntityType, Integer> animalLimits, int villagerLimit, String breedingFailedMsg, String[] area)
+public ReguladorDeOvos(Main instance, HashMap<EntityType, Integer> animalLimits,String breedingFailedMsg, String[] area)
 {
   this.plugin = instance;
   this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);

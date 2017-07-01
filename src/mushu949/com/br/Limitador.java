@@ -21,7 +21,7 @@ public class Limitador implements Listener{
 		  private String breedingFailedMsg;
 		  private String[] area;
 		  
-		  public Limitador(Main instance, HashMap<EntityType, Integer> animalLimits, int villagerLimit, String breedingFailedMsg, String[] area)
+		  public Limitador(Main instance, HashMap<EntityType, Integer> animalLimits, String breedingFailedMsg, String[] area)
 		  {
 		    this.plugin = instance;
 		    this.plugin.getServer().getPluginManager().registerEvents(this, this.plugin);

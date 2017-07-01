@@ -12,7 +12,6 @@ public class Main
   extends JavaPlugin
 {
   HashMap<EntityType, Integer> animalLimits = new HashMap<EntityType, Integer>();
-  int villagerLimit;
   String[] area;
   
   public void onEnable()
@@ -37,15 +36,14 @@ public class Main
         this.animalLimits.put(tempAnimal, Integer.valueOf(tempLimit));
       }
     }
-    this.villagerLimit = getConfig().getInt("villager-limite", -1);
     
     String configArea = getConfig().getString("area-total", "16, 16, 256");
     this.area = configArea.split(", ");
     
     getLogger().info("Carregamento concluido!");
     
-    new Limitador(this, this.animalLimits, this.villagerLimit, breedingFailedMsg, this.area);
-    new ReguladorDeOvos(this, this.animalLimits, this.villagerLimit, breedingFailedMsg, this.area);
+    new Limitador(this, this.animalLimits, breedingFailedMsg, this.area);
+    new ReguladorDeOvos(this, this.animalLimits, breedingFailedMsg, this.area);
     getLogger().info("[MuAnimalControle] Plugin carregado com sucesso!");
   }
   
