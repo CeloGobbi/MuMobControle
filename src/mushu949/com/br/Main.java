@@ -44,7 +44,8 @@ public class Main
     
     getLogger().info("Carregamento concluido!");
     
-    new Raiz(this, this.animalLimits, this.villagerLimit, breedingFailedMsg, this.area);
+    new Limitador(this, this.animalLimits, this.villagerLimit, breedingFailedMsg, this.area);
+    new ReguladorDeOvos(this, this.animalLimits, this.villagerLimit, breedingFailedMsg, this.area);
     getLogger().info("[MuAnimalControle] Plugin carregado com sucesso!");
   }
   
