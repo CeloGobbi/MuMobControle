@@ -1,6 +1,6 @@
 # MuAnimalControle
 Pagina do Spigot:
-*https://www.spigotmc.org/resources/muanimalcontrole.35513/*
+*https://www.spigotmc.org/resources/mumobcontrole.35513/*
 
 # Português:
 
