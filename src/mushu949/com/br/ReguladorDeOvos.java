@@ -31,7 +31,6 @@ public ReguladorDeOvos(Main instance, HashMap<EntityType, Integer> animalLimits,
 {
 	if ((event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.EGG) || 
 		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SPAWNER) || 
-		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BREEDING) || 
 		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_IRONGOLEM) || 
 		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_SNOWMAN) || 
 		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_WITHER) || 

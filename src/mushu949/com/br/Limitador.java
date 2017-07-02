@@ -13,7 +13,6 @@ import org.bukkit.event.EventPriority;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
-import org.bukkit.inventory.PlayerInventory;
 
 public class Limitador implements Listener{
 	
@@ -35,8 +34,11 @@ public class Limitador implements Listener{
 		  public void mao_direia(PlayerInteractEntityEvent e){
 		      Player player = e.getPlayer();
 		     
-		      ItemStack item = ((PlayerInventory) player.getInventory().getItemInOffHand()).getItemInMainHand();
+		      ItemStack item = player.getInventory().getItemInMainHand();
 		      if((item != null && item.getType() == Material.BEETROOT) ||
+		    	 (item != null && item.getType() == Material.EGG) ||
+		    	 (item != null && item.getType() == Material.MOB_SPAWNER) ||
+		    	 (item != null && item.getType() == Material.MONSTER_EGG) ||
 		    	 (item != null && item.getType() == Material.RAW_FISH) ||
 		    	 (item != null && item.getType() == Material.APPLE) ||
 		    	 (item != null && item.getType() == Material.NETHER_STALK) ||
@@ -55,6 +57,7 @@ public class Limitador implements Listener{
 		    	 (item != null && item.getType() == Material.MELON_SEEDS) ||
 		    	 (item != null && item.getType() == Material.SEEDS) ||
 		     	 (item != null && item.getType() == Material.WHEAT)) 
+		    
 		      {
 		          EntityType eventEntity = e.getRightClicked().getType();
 		          if (this.animalLimits.containsKey(eventEntity))
@@ -68,7 +71,50 @@ public class Limitador implements Listener{
 		            }
 		          }
 		        }
-		      }
+		      }    
+		  
+		  @EventHandler(priority=EventPriority.HIGH)
+		  public void mao_Esquerda(PlayerInteractEntityEvent e){
+		      Player player = e.getPlayer();
+		     
+		      ItemStack item = player.getInventory().getItemInOffHand();
+		      if((item != null && item.getType() == Material.BEETROOT) ||
+		    	 (item != null && item.getType() == Material.EGG) ||
+		    	 (item != null && item.getType() == Material.MOB_SPAWNER) ||
+		    	 (item != null && item.getType() == Material.MONSTER_EGG) ||
+		    	 (item != null && item.getType() == Material.RAW_FISH) ||
+		    	 (item != null && item.getType() == Material.APPLE) ||
+		    	 (item != null && item.getType() == Material.NETHER_STALK) ||
+		    	 (item != null && item.getType() == Material.ROTTEN_FLESH) ||
+		    	 (item != null && item.getType() == Material.GRILLED_PORK) ||
+		    	 (item != null && item.getType() == Material.PORK) ||
+		    	 (item != null && item.getType() == Material.COOKED_CHICKEN) ||
+		    	 (item != null && item.getType() == Material.RAW_CHICKEN) ||
+		    	 (item != null && item.getType() == Material.COOKED_BEEF) ||
+		    	 (item != null && item.getType() == Material.RAW_BEEF) ||
+		    	 (item != null && item.getType() == Material.GOLDEN_APPLE) ||
+		    	 (item != null && item.getType() == Material.GOLDEN_CARROT) ||
+		    	 (item != null && item.getType() == Material.POTATO_ITEM) ||
+		    	 (item != null && item.getType() == Material.CARROT_ITEM) ||
+		    	 (item != null && item.getType() == Material.PUMPKIN_SEEDS) ||
+		    	 (item != null && item.getType() == Material.MELON_SEEDS) ||
+		    	 (item != null && item.getType() == Material.SEEDS) ||
+		     	 (item != null && item.getType() == Material.WHEAT)) 
+		    
+		      {
+		          EntityType eventEntity = e.getRightClicked().getType();
+		          if (this.animalLimits.containsKey(eventEntity))
+		          {
+		            int limit = ((Integer)this.animalLimits.get(eventEntity)).intValue();
+		            boolean canBreed = canBreed(eventEntity, limit, player);
+		            if (!canBreed)
+		            {
+		              player.sendMessage(ChatColor.RED + this.breedingFailedMsg);
+		              e.setCancelled(true);
+		            }
+		          }
+		        }
+		      }      
 		      
 		  public boolean canBreed(EntityType animalType, int limit, Player player)
 		  {
