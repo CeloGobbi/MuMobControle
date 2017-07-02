@@ -52,7 +52,6 @@ public class Main
     getLogger().info("[MuAnimalControle] Foi encerrado com sucesso!");
   }
   
-  
   public int getEntityCount(EntityType eventEntity, Player player)
   {
     int count = 0;
