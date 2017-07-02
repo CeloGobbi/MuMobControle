@@ -30,6 +30,31 @@ public ReguladorDeOvos(Main instance, HashMap<EntityType, Integer> animalLimits,
 	public void onCreatureSpawnEvent(CreatureSpawnEvent event)
 {
 	if ((event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.EGG) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SPAWNER) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BREEDING) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_IRONGOLEM) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_SNOWMAN) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.BUILD_WITHER) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.CHUNK_GEN) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.DISPENSE_EGG) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.CURED) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.CUSTOM) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.DEFAULT) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.ENDER_PEARL) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.INFECTION) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.JOCKEY) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.LIGHTNING) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.MOUNT) || 
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.NATURAL) ||
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.NETHER_PORTAL) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.OCELOT_BABY) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.REINFORCEMENTS) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SHOULDER_ENTITY) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SILVERFISH_BLOCK) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SLIME_SPLIT) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.TRAP) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.VILLAGE_DEFENSE) ||  
+		(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.VILLAGE_INVASION) ||
 			(event.getSpawnReason() == CreatureSpawnEvent.SpawnReason.SPAWNER_EGG)) {
     if (this.animalLimits.containsKey(event.getEntityType()))
     {
@@ -41,7 +66,6 @@ public ReguladorDeOvos(Main instance, HashMap<EntityType, Integer> animalLimits,
     }
   }
 }
-
 
     public boolean canBreed(Entity eventEntity, int limit)
 {
