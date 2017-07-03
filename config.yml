@@ -105,4 +105,4 @@ AvisoSPAWNER-EGG: §6[§f§lMuMC§6] O invocador não funcionara se o limite de 
 #The numbers 16 represent respectively the X and the Z while the 256 represents the Y
 #area-total: X=16, Z=16, Y=256
 
-area-total: 288, 288, 256
+area-total: 128, 128, 256
