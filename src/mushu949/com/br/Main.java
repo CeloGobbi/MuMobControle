@@ -11,20 +11,21 @@ import org.bukkit.plugin.java.JavaPlugin;
 public class Main
   extends JavaPlugin
 {
-  HashMap<EntityType, Integer> animalLimits = new HashMap<EntityType, Integer>();
-  String[] area;
+	  HashMap<EntityType, Integer> animalLimits = new HashMap<EntityType, Integer>();
+	  String[] area;
   
   public void onEnable()
   {
     saveDefaultConfig();
-    
-    String breedingFailedMsg = getConfig().getString("falha-na-reproducao", "Sua criação já atingiu numero maximo de mobs!");
+
+    String Falhanareproducao = getConfig().getString("falha-na-reproducao", "§6[§f§lMuMC§6] Sua criação já atingiu numero maximo de mobs!");
+    String AvisoSPAWNER_EGG = getConfig().getString("AvisoSPAWNER-EGG", "§6[§f§lMuMC§6] O invocador não funcionara se o limite de mobs for atingido!");
     
     List<String> breedLimitList = getConfig().getStringList("limite-de-animais");
     if (breedLimitList.size() == 0)
     {
-      getLogger().info("A lista de criações a serem controladas esta vazia!");
-    }
+        getLogger().info("A lista de criações a serem controladas esta vazia!");
+      }
     else
     {
       getLogger().info("Carregando animais e seus limites ...");
@@ -32,18 +33,17 @@ public class Main
       {
         String[] tempString = entry.split("=");
         int tempLimit = Integer.parseInt(tempString[1].trim());
-		EntityType tempAnimal = EntityType.valueOf(tempString[0].toUpperCase());
+        EntityType tempAnimal = EntityType.valueOf(tempString[0].toUpperCase());
         this.animalLimits.put(tempAnimal, Integer.valueOf(tempLimit));
       }
     }
-    
     String configArea = getConfig().getString("area-total", "16, 16, 256");
     this.area = configArea.split(", ");
     
     getLogger().info("Carregamento concluido!");
     
-    new Limitador(this, this.animalLimits, breedingFailedMsg, this.area);
-    new ReguladorDeOvos(this, this.animalLimits, breedingFailedMsg, this.area);
+    new Limitador(this, this.animalLimits, Falhanareproducao, this.area);
+    new ReguladorDeOvos(this, this.animalLimits, AvisoSPAWNER_EGG, this.area);
     getLogger().info("[MuAnimalControle] Plugin carregado com sucesso!");
   }
   
