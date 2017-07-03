@@ -1,4 +1,4 @@
-# MuAnimalControle
+# MuMobControle
 Pagina do Spigot:
 *https://www.spigotmc.org/resources/mumobcontrole.35513/*
 
