@@ -14,7 +14,7 @@ import org.bukkit.event.entity.CreatureSpawnEvent;
 import org.bukkit.event.player.PlayerInteractEvent;
 import org.bukkit.inventory.ItemStack;
 
-import com.connorlinfoot.actionbarapi.ActionBarAPI;
+import de.Herbystar.TTA.TTA_Methods;
 
 public class ReguladorDeOvos
   implements Listener
@@ -32,7 +32,7 @@ public class ReguladorDeOvos
     this.animalLimits = animalLimits;
     this.area = area;
   }
-  
+
   @EventHandler
   public void onInteract(PlayerInteractEvent e)
   {
@@ -40,7 +40,8 @@ public class ReguladorDeOvos
     if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
     ItemStack item = player.getInventory().getItemInMainHand();
       if (((item != null) && (item.getType() == Material.MONSTER_EGG))){
-        ActionBarAPI.sendActionBar(player, this.AvisoSPAWNER_EGG, 60);
+        TTA_Methods.sendActionBar(player, this.AvisoSPAWNER_EGG, 60);
+
       }
     }
   }
@@ -52,7 +53,7 @@ public class ReguladorDeOvos
     if (e.getAction().equals(Action.RIGHT_CLICK_BLOCK)) {
     ItemStack item = player.getInventory().getItemInOffHand();
       if (((item != null) && (item.getType() == Material.MONSTER_EGG))){
-        ActionBarAPI.sendActionBar(player, this.AvisoSPAWNER_EGG, 60);
+        TTA_Methods.sendActionBar(player, this.AvisoSPAWNER_EGG, 60);
       }
     }
   }

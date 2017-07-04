@@ -15,6 +15,8 @@ import org.bukkit.inventory.ItemStack;
 
 import com.connorlinfoot.actionbarapi.ActionBarAPI;
 
+import de.Herbystar.TTA.TTA_Methods;
+
 public class Limitador
   implements Listener
 {
@@ -31,7 +33,7 @@ public class Limitador
     this.animalLimits = animalLimits;
     this.area = area;
   }
-  
+
   @EventHandler(priority=EventPriority.HIGH)
   public void mao_direia(PlayerInteractEntityEvent e)
   {
@@ -69,12 +71,13 @@ public class Limitador
         if (!canBreed)
         {
           ActionBarAPI.sendActionBar(player, this.Falhanareproducao, 60);
+          TTA_Methods.sendActionBar(player, this.Falhanareproducao, 60);
           e.setCancelled(true);
         }
       }
     }
   }
-  
+
   @EventHandler(priority=EventPriority.HIGH)
   public void mao_Esquerda(PlayerInteractEntityEvent e)
   {
@@ -111,7 +114,7 @@ public class Limitador
         boolean canBreed = canBreed(eventEntity, limit, player);
         if (!canBreed)
         {
-          ActionBarAPI.sendActionBar(player, this.Falhanareproducao, 60);
+          TTA_Methods.sendActionBar(player, this.Falhanareproducao, 60);
           e.setCancelled(true);
         }
       }
