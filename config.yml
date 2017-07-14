@@ -4,7 +4,9 @@
 #Config version: 1.0
 #
 #limite-de-animais:
-#
+
+Prefixo-Do-Plugin: "§f[§cMu§aMobControle§f]"
+
 #Portugues BR
 #Se o valor 0 o mob será impedido de nascer! 
 #Se um animal/monstro não estiver na lista (limite-de-animais), o seu limite de reprodução/invocação não vai ser controlado!
@@ -12,7 +14,7 @@
 #
 #English
 #If the value 0 the mob will be prevented from being born!
-#If an animal / monster is not on the list (limite-de-animais), your playback / invocation limit will not be controlled!
+#If an animal/monster is not on the list (limite-de-animais), your playback/invocation limit will not be controlled!
 #In order for the plugin to control an animal from the list, simply remove the # - EX: in (#- RABBIT=25) to (- RABBIT=25)
 
 limite-de-animais:

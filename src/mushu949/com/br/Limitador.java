@@ -13,8 +13,6 @@ import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerInteractEntityEvent;
 import org.bukkit.inventory.ItemStack;
 
-import com.connorlinfoot.actionbarapi.ActionBarAPI;
-
 import de.Herbystar.TTA.TTA_Methods;
 
 public class Limitador
@@ -70,7 +68,6 @@ public class Limitador
         boolean canBreed = canBreed(eventEntity, limit, player);
         if (!canBreed)
         {
-          ActionBarAPI.sendActionBar(player, this.Falhanareproducao, 60);
           TTA_Methods.sendActionBar(player, this.Falhanareproducao, 60);
           e.setCancelled(true);
         }
